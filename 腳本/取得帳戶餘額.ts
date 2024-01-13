@@ -1,8 +1,8 @@
 import { StargateClient } from "@cosmjs/stargate";
 import 區塊鏈資訊 from "chain-registry";
 
-const crescent = 區塊鏈資訊.chains.find((chain) =>
-  chain.chain_id.includes("crescent")
+const crescent = 區塊鏈資訊.chains.find((區塊鏈) =>
+  區塊鏈.chain_id.includes("crescent")
 );
 
 const 端點 = crescent?.apis?.rpc?.[0].address;
@@ -24,7 +24,7 @@ const 主要 = async () => {
 
   const 客戶端 = await StargateClient.connect(端點);
 
-  const 回覆 = await 客戶端.getBalance(地址, "crescentd");
+  const 回覆 = await 客戶端.getAllBalances(地址);
 
   console.log("帳戶餘額: ", 回覆);
 

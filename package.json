@@ -12,7 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "@cosmjs/stargate": "^0.32.2",
+    "@cosmjs/tendermint-rpc": "^0.32.2",
     "chain-registry": "^1.25.0",
+    "node-fetch": "^3.3.2",
     "tsx": "^4.7.0"
   }
 }
